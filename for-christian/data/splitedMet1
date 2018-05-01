@@ -1,0 +1,1 @@
+^{ writeByte(value); writeByte(value >> 8); writeByte(value >> 16); }#

@@ -1,0 +1,43 @@
+^{ writeByte(value); writeByte(value >> 8); writeByte(value >> 16); }, set get , write ui 24$
+
+^{ TypedQuery<ServiceDesiredStateEntity> query = entityManagerProvider.get(). createQuery("SELECT sd from ServiceDesiredStateEntity sd", ServiceDesiredStateEntity.class); try { return query.getResultList(); } catch (NoResultException ignored) { } return null; }, get { in, find all$
+
+^{ Append append = new Append(tappend.getRow()); List<ByteBuffer> columns = tappend.getColumns(); List<ByteBuffer> values = tappend.getValues(); if (columns.size() != values.size()) { throw new IllegalArgumentException( "Sizes of columns and values in tappend object are not matching"); } int length = columns.size(); for (int i = 0; i < length; i++) { byte famAndQf = KeyValue.parseColumn(getBytes(columns.get(i))); append.add(famAndQf[0], famAndQf[1], getBytes(values.get(i))); } return append; }, arcons n, append from thrift$
+
+^{ this.searchClasspath = searchClasspath; }, get asbe, set search classpath$
+
+^{ myendTag = s; }, filter a, set end tag$
+
+^{ return appDeploymentId; }, methasic, get app deployment id$
+
+^{ exchange.getIn().setBody("This is my message text."); },  int doo, process$
+
+^{ channel.callMethod( getDescriptor().getMethods().get(18), controller, request, org.apache.hadoop.hbase.coprocessor.transactional.generated.SsccRegionProtos.SsccPutMultipleTransactionalResponse.getDefaultInstance(), com.google.protobuf.RpcUtil.generalizeCallback( done, org.apache.hadoop.hbase.coprocessor.transactional.generated.SsccRegionProtos.SsccPutMultipleTransactionalResponse.class, org.apache.hadoop.hbase.coprocessor.transactional.generated.SsccRegionProtos.SsccPutMultipleTransactionalResponse.getDefaultInstance())); }, get dath, put multiple$
+
+^{ // got a file, so we should have a.camelLock file as well String name = exchange.getIn().getHeader(Exchange.FILE_PATH) + FileComponent.DEFAULT_LOCK_FILE_POSTFIX; File lock = new File(name); // lock file should exist assertTrue("Lock file should exist: " + name, lock.exists()); }, smargows, process$
+
+^{ if (target instanceof ClientSideCellSetModel) { ((ClientSideCellSetModel) target).setCellSetModelListener(null); } }, to vipis, after unmarshal$
+
+^{ return " -Xbgi : Generate getXXX and isXXX methods for Booleans"; }, repering, get usage$
+
+^{ if (et == this.et) { if (!hasExpired()) { ExpiryTask.suspendExpiration(); } this.rescheduled = true; } }, wof$
+^{ , after reschedule$
+
+^{ Preconditions.checkState(0 <= idx && idx < numEvents); events[idx] = event; }, end$
+^{ , set$
+
+^{ Referenceable referenceable = new Referenceable(TABLE_TYPE, traitNames); referenceable.set("name", name); referenceable.set(AtlasClient.REFERENCEABLE_ATTRIBUTE_NAME, name); referenceable.set("description", description); referenceable.set("owner", owner); referenceable.set("tableType", tableType); referenceable.set("createTime", System.currentTimeMillis()); referenceable.set("lastAccessTime", System.currentTimeMillis()); referenceable.set("retention", System.currentTimeMillis()); referenceable.set("db", dbId); referenceable.set("sd", sd); referenceable.set("columns", columns); return createInstance(referenceable); }, property, table$
+
+^{ Counter counter = statusCodeCounters.get(code); if (null == counter) { counter = statusCodeStatLogger.getCounter(code.name()); Counter oldCounter = statusCodeCounters.putIfAbsent(code, counter); if (null != oldCounter) { counter = oldCounter; } } counter.inc(); statusCodeTotal.inc(); }, lacceati, count status code$
+
+^{ return false; }, statk ad, is connection control$
+
+^{ return null; }, subLod i, get attribute names$
+
+^{ checkStarted(); clearIO(); try { HAPolicy haPolicy = server.getHAPolicy(); if (haPolicy instanceof SharedStoreSlavePolicy) { ((SharedStoreSlavePolicy) haPolicy).setFailoverOnServerShutdown(failoverOnServerShutdown); } } finally { blockOnIO(); } }, Gow sipt, set failover on server shutdown$
+
+^{ return Collections.unmodifiableMap(attributes); }, class( +, get attributes$
+
+^{ return q.getLocalPart().equals(localName) && q.getNamespaceURI().equals(uri) && q.getPrefix().equals(prefix); }, trealn$
+, equals$
+
